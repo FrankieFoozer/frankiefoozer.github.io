@@ -29,3 +29,41 @@ nav a:hover {
     background-color: #777;
     border-color: yellow;
     }
+
+/* Position of dropdown menu below each nav item */
+nav li {
+    position: relative;
+    }
+
+/* Dropdown hidden by default */
+nav ul.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%; /* puts it directly below the parent item */
+    left: 0;
+    background-color: #444;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    }
+
+/* Style the dropdown links */
+nav ul.dropdown li a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #555;
+    border: 2px solid white;
+    border-radius: 0px;
+    white-space: nowrap; /* prevents text from wrapping */
+    }
+
+/* Hover effect */
+nav ul.dropdown li a:hover {
+    background-color: #777;
+    border-color: yellow;
+}
+
+/* Show dropdown on hover */
+nav li:hover ul.dropdown {
+    display: block;
+    }
