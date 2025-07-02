@@ -1,3 +1,22 @@
 h1 {
   color: #006400; /* dark green */
 }
+
+main p {
+  padding: 1em;
+  margin: 1em auto;
+  max-width: 800px;
+}
+
+.first-paragraph::first-letter {
+  font-size: 200%;
+  color: #B22222; /* firebrick red, just an example */
+  font-weight: bold;
+  float: left;
+  padding-right: 5px;
+  line-height: 1;
+}
+
+p:not(.first-paragraph) {
+  text-indent: 2em;
+}
