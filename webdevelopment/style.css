@@ -1,13 +1,85 @@
-h1 {
-  color: #006400; /* dark green */
+/* this defines the main typeface as Helvetica */
+body {
+  font-family: Helvetica, Arial, sans-serif;
 }
 
-main p {
-  padding: 1em;
-  margin: 1em auto;
+/* this centers all content */
+.centered-content {
   max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left;
 }
 
+.centered-content header,
+.centered-content main,
+.centered-content footer {
+  width: 100%;
+}
+
+/* these nav elements left-justify and define the style of the nav */
+nav {
+  background-color: magenta;
+}
+
+.nav-inner {
+  max-width: 800px;      /* Matches the .centered-content */
+  margin: 0 auto;        /* Centers the nav bar */
+  padding: 0 px;       /* Optional: same as .centered-content padding */
+  text-align: left;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1em;              /* spacing between nav items */
+}
+
+nav li a {
+  color: black;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  display: block;
+}
+
+/* this left-justifes headline type, but still keeps it centered */
+h1, h2 {
+  text-align: left;
+}
+
+/* this is my portrait photo style */
+.profile-photo {
+  display: block;
+  margin: 1em 0;
+  width: 200px;       /* Adjust size as needed */
+  height: auto;
+  border-radius: 8px; /* Optional: round corners */
+}
+
+/* this is the type leading */
+p {
+  line-height: 1.6;
+}
+
+/* this is h1 color (black) */
+h1 {
+  color: #000;
+}
+
+/* this formats the main content - changed to make everything align left */
+main p {
+  margin: 1em 0;       /* changed from auto to 0 */
+  max-width: 100%;     /* removed inner centering */
+}
+
+/* this aligns my block quote left with everything else */
+blockquote {
+  margin-left: 0;
+}
+
+/* this formats the main paragraph */
 .first-paragraph::first-letter {
   font-size: 200%;
   color: #B22222; /* firebrick red, just an example */
@@ -17,6 +89,31 @@ main p {
   line-height: 1;
 }
 
+/* this is a rule that says any paragraph that is NOT the first, indent by this amount */
 p:not(.first-paragraph) {
   text-indent: 2em;
+}
+
+/* this left-aligns the footer */
+footer {
+  width: 100%;
+  text-align: left;
+  padding: 1em 0 0 0;
+  margin-top: 2em;
+}
+
+footer p {
+  margin: 0;
+  padding: 0;       /* ← remove any left padding */
+  max-width: 100%;
+}
+
+footer {
+  text-align: left;
+  margin-top: 2em;
+}
+
+footer {
+  border: none;
+  background-color: magenta;
 }
