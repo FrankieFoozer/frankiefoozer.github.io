@@ -1,12 +1,25 @@
 /* Style of my navigation bar */
+
+/* Desktop nav styles */
 nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    display: flex;
     justify-content: left;
     background-color: magenta;
+}
+
+/* Default to hidden in mobile — overwritten by JS toggle (on index.html)*/
+nav ul {
+    display: none;
+}
+
+/* Desktop only (overwrites default for wider screens) */
+@media only screen and (min-width: 641px) {
+    nav ul {
+        display: flex;
     }
+}
 
 /* Style of each nav item (box appearance) */
 nav li {
@@ -46,6 +59,7 @@ nav ul.dropdown {
     padding: 0;
     margin: 0;
     list-style-type: none;
+    z-index: 1000; /* added to correct drop down menu items behind main menu */
     }
 
 /* Style the dropdown links */
@@ -69,3 +83,53 @@ nav ul.dropdown li a:hover {
 nav li:hover ul.dropdown {
     display: block;
     }
+
+/* Hide hamburger icon on desktop */
+#hamburger {
+    display: none;
+}
+
+/* Mobile Navigation Styles */
+@media only screen and (max-width: 640px) {
+    /* Show hamburger on mobile */
+    #hamburger {
+        display: block;
+        font-size: 2rem;
+        padding: 10px 20px;
+        cursor: pointer;
+        background-color: magenta;
+        color: white;
+    }
+
+    /* Stack nav vertically (do NOT hide it here — that’s handled above) */
+    nav ul {
+        flex-direction: column;
+        background-color: magenta;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Stack list items and add divider lines */
+    nav li {
+        width: 100%;
+        margin: 0;
+        border-bottom: 1px solid white;
+        text-align: left;
+    }
+
+    /* Full-width nav links */
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        color: black;
+        background-color: magenta;
+        text-decoration: none;
+    }
+
+    /* Hide dropdowns on mobile */
+    .mobile-hide {
+        display: none;
+    }
+}
