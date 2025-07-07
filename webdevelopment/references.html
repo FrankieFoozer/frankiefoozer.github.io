@@ -11,18 +11,42 @@
 <head>
     <meta charset="utf-8">
     <title>Page Title</title>
+
+    <style>
+    #first {
+        margin-top:40px;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 175px;
+                        
+        border: 2px solid red;
+        background-color: orange;
+        color: black;
+        }
+
+    #first a {
+        color: black;
+        text-decoration: underline;
+        }
+    </style>
+
     <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
 
+<!-- Hamburger Icon for Mobile -->
+<div id="hamburger">&#9776;</div>
+
 <!-- Nav Bar -->
 <nav>
+    <div class="nav-inner">
     <ul>
         <li>
-            <a href="index.html">Home</a>
-            <ul class="dropdown">
+            <a href="index.html">HOME</a>
+            <ul class="dropdown mobile-hide">
                 <li><a href="#">Link 1</a></li>
                 <li><a href="#">Link 2</a></li>
                 <li><a href="#">Link 3</a></li>
@@ -30,8 +54,8 @@
         </li>
 
         <li>
-            <a href="about.html">About</a>
-            <ul class="dropdown">
+            <a href="about.html">ABOUT</a>
+            <ul class="dropdown mobile-hide">
                 <li><a href="#">Link 1</a></li>
                 <li><a href="#">Link 2</a></li>
                 <li><a href="#">Link 3</a></li>
@@ -39,8 +63,8 @@
         </li>
 
         <li>
-            <a href="learn.html">Learn</a>
-            <ul class="dropdown">
+            <a href="learn.html">LEARN</a>
+            <ul class="dropdown mobile-hide">
                 <li><a href="#">Link 1</a></li>
                 <li><a href="#">Link 2</a></li>
                 <li><a href="#">Link 3</a></li>
@@ -48,8 +72,8 @@
         </li>
 
         <li>
-            <a href="references.html">References</a>
-            <ul class="dropdown">
+            <a href="references.html">REFERENCES</a>
+            <ul class="dropdown mobile-hide">
                 <li><a href="#">Link 1</a></li>
                 <li><a href="#">Link 2</a></li>
                 <li><a href="#">Link 3</a></li>
@@ -57,17 +81,19 @@
         </li>
 
         <li>
-            <a href="contact.html">#Contact</a>
-            <ul class="dropdown">
+            <a href="contact.html">#CONTACT</a>
+            <ul class="dropdown mobile-hide">
                 <li><a href="#">Link 1</a></li>
                 <li><a href="#">Link 2</a></li>
                 <li><a href="#">Link 3</a></li>
             </ul>
         </li>
     </ul>
+    </div>
 </nav>
 <!-- End Nav Bar -->
 
+<div class="centered-content">
     <header>
         <h1>References</h1>
         <h2>Sources for visual design, branding, and typography</h2>
@@ -98,6 +124,21 @@
             | All rights reserved.
         </p>
     </footer>
+</div>
+
+<!-- Javascript for Burger -->
+<script>
+  document.getElementById('hamburger').addEventListener('click', function () {
+    var navMenu = document.querySelector('nav ul');
+    var currentDisplay = window.getComputedStyle(navMenu).display;
+
+    if (currentDisplay === 'none') {
+      navMenu.style.display = 'flex';
+    } else {
+      navMenu.style.display = 'none';
+    }
+  });
+</script>
 
 </body>
 </html>
