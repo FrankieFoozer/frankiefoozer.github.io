@@ -13,17 +13,21 @@
                <meta charset="utf-8">
                <title>Home</title>
                 <link rel="stylesheet" href="nav.css">
-                <link rel="stylesheet" href="style.css">               
+                <link rel="stylesheet" href="style.css">  
+                <meta name="viewport" content="width=device-width, initial-scale=1">             
 </head>
 
 <body>
+
+<!-- Hamburger Icon for Mobile -->
+<div id="hamburger">&#9776;</div>
 
 <!-- Nav Bar -->
 <nav>
     <ul>
         <li>
             <a href="index.html">Home</a>
-            <ul class="dropdown">
+            <ul class="dropdown mobile-hide">
                 <li><a href="#">Link 1</a></li>
                 <li><a href="#">Link 2</a></li>
                 <li><a href="#">Link 3</a></li>
@@ -32,7 +36,7 @@
 
         <li>
             <a href="about.html">About</a>
-            <ul class="dropdown">
+            <ul class="dropdown mobile-hide">
                 <li><a href="#">Link 1</a></li>
                 <li><a href="#">Link 2</a></li>
                 <li><a href="#">Link 3</a></li>
@@ -41,7 +45,7 @@
 
         <li>
             <a href="learn.html">Learn</a>
-            <ul class="dropdown">
+            <ul class="dropdown mobile-hide">
                 <li><a href="#">Link 1</a></li>
                 <li><a href="#">Link 2</a></li>
                 <li><a href="#">Link 3</a></li>
@@ -50,7 +54,7 @@
 
         <li>
             <a href="references.html">References</a>
-            <ul class="dropdown">
+            <ul class="dropdown mobile-hide">
                 <li><a href="#">Link 1</a></li>
                 <li><a href="#">Link 2</a></li>
                 <li><a href="#">Link 3</a></li>
@@ -59,7 +63,7 @@
 
         <li>
             <a href="contact.html">#Contact</a>
-            <ul class="dropdown">
+            <ul class="dropdown mobile-hide">
                 <li><a href="#">Link 1</a></li>
                 <li><a href="#">Link 2</a></li>
                 <li><a href="#">Link 3</a></li>
@@ -100,6 +104,20 @@
             | All rights reserved.
         </p>
     </footer>
+
+<!-- Javascript for Burger -->
+<script>
+  document.getElementById('hamburger').addEventListener('click', function () {
+    var navMenu = document.querySelector('nav ul');
+    var currentDisplay = window.getComputedStyle(navMenu).display;
+
+    if (currentDisplay === 'none') {
+      navMenu.style.display = 'flex';
+    } else {
+      navMenu.style.display = 'none';
+    }
+  });
+</script>
 
 </body>
 </html>
