@@ -12,6 +12,25 @@
 <head>
                <meta charset="utf-8">
                <title>Home</title>
+
+                <style>
+                #first {
+                        margin-top:40px;
+                        padding-left: 15px;
+                        padding-right: 15px;
+                        width: 175px;
+                        
+                        border: 2px solid red;
+                        background-color: orange;
+                        color: black;
+                        }
+
+                #first a {
+                        color: black;
+                        text-decoration: underline;
+                        }
+                </style>
+
                 <link rel="stylesheet" href="nav.css">
                 <link rel="stylesheet" href="style.css">  
                 <meta name="viewport" content="width=device-width, initial-scale=1">             
@@ -24,9 +43,10 @@
 
 <!-- Nav Bar -->
 <nav>
+    <div class="nav-inner">
     <ul>
         <li>
-            <a href="index.html">Home</a>
+            <a href="index.html">HOME</a>
             <ul class="dropdown mobile-hide">
                 <li><a href="#">Link 1</a></li>
                 <li><a href="#">Link 2</a></li>
@@ -35,7 +55,7 @@
         </li>
 
         <li>
-            <a href="about.html">About</a>
+            <a href="about.html">ABOUT</a>
             <ul class="dropdown mobile-hide">
                 <li><a href="#">Link 1</a></li>
                 <li><a href="#">Link 2</a></li>
@@ -44,7 +64,7 @@
         </li>
 
         <li>
-            <a href="learn.html">Learn</a>
+            <a href="learn.html">LEARN</a>
             <ul class="dropdown mobile-hide">
                 <li><a href="#">Link 1</a></li>
                 <li><a href="#">Link 2</a></li>
@@ -53,7 +73,7 @@
         </li>
 
         <li>
-            <a href="references.html">References</a>
+            <a href="references.html">REFERENCES</a>
             <ul class="dropdown mobile-hide">
                 <li><a href="#">Link 1</a></li>
                 <li><a href="#">Link 2</a></li>
@@ -62,7 +82,7 @@
         </li>
 
         <li>
-            <a href="contact.html">#Contact</a>
+            <a href="contact.html">#CONTACT</a>
             <ul class="dropdown mobile-hide">
                 <li><a href="#">Link 1</a></li>
                 <li><a href="#">Link 2</a></li>
@@ -70,9 +90,11 @@
             </ul>
         </li>
     </ul>
+    </div>
 </nav>
 <!-- End Nav Bar -->
 
+<div class="centered-content">
   <header>
     <h1>Frank Corridori</h1>
   </header>
@@ -104,6 +126,7 @@
             | All rights reserved.
         </p>
     </footer>
+</div>
 
 <!-- Javascript for Burger -->
 <script>
