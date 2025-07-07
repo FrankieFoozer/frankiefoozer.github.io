@@ -29,11 +29,17 @@ nav {
   text-align: left;
 }
 
+/* this was added as a "dektop override" for the nav - menu stays hidden on mobile and only shows on desktop */
+@media only screen and (min-width: 641px) {
+  nav ul {
+    display: flex;
+  }
+}
+
 nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
   gap: 1em;              /* spacing between nav items */
 }
 
@@ -129,8 +135,12 @@ footer {
     margin: 0.5em 0;
   }
 
-  .profile-pic {
+  .profile-photo {
     width: 100%;
     max-width: 300px;
+  }
+
+    footer {
+    text-align: center;
   }
 }
