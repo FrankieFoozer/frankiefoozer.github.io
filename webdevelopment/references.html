@@ -38,7 +38,8 @@
 <body>
 
 <!-- Hamburger Icon for Mobile -->
-<div id="hamburger">&#9776;</div>
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" id="hamburger">&#9776;</label>
 
 <!-- Nav Bar -->
 <nav>
@@ -46,20 +47,10 @@
     <ul>
         <li>
             <a href="index.html">HOME</a>
-            <ul class="dropdown mobile-hide">
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 3</a></li>
-            </ul>
         </li>
 
         <li>
             <a href="about.html">ABOUT</a>
-            <ul class="dropdown mobile-hide">
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 3</a></li>
-            </ul>
         </li>
 
         <li>
@@ -73,26 +64,17 @@
 
         <li>
             <a href="references.html">REFERENCES</a>
-            <ul class="dropdown mobile-hide">
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 3</a></li>
-            </ul>
         </li>
 
         <li>
             <a href="contact.html">#CONTACT</a>
-            <ul class="dropdown mobile-hide">
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 3</a></li>
-            </ul>
         </li>
     </ul>
     </div>
 </nav>
 <!-- End Nav Bar -->
 
+<div class="flex-wrapper">
 <div class="centered-content">
     <header>
         <h1>References</h1>
@@ -125,20 +107,7 @@
         </p>
     </footer>
 </div>
-
-<!-- Javascript for Burger -->
-<script>
-  document.getElementById('hamburger').addEventListener('click', function () {
-    var navMenu = document.querySelector('nav ul');
-    var currentDisplay = window.getComputedStyle(navMenu).display;
-
-    if (currentDisplay === 'none') {
-      navMenu.style.display = 'flex';
-    } else {
-      navMenu.style.display = 'none';
-    }
-  });
-</script>
+</div>
 
 </body>
 </html>
