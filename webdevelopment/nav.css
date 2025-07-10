@@ -38,6 +38,11 @@ nav a {
     font-size: 0.9rem;
     }
 
+        /* Desktop hover */
+        nav li:hover ul.dropdown {
+            display: block;
+            }
+
 /* Hover effect */
 nav a:hover {
     background-color: white;
@@ -132,4 +137,57 @@ nav li:hover ul.dropdown {
     .mobile-hide {
         display: none;
     }
+}
+
+/* new edits */
+#menu-toggle {
+  display: none;
+}
+
+
+/* Show hamburger only on small screens */
+@media only screen and (max-width: 640px) {
+  #hamburger {
+    display: block;
+    font-size: 2rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: magenta;
+    color: white;
+    z-index: 1001;
+  }
+
+  /* Entire nav hidden by default */
+  nav ul {
+    display: none; /* hidden by default */
+    flex-direction: column;
+    background-color: magenta;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Show menu when checkbox is checked */
+  #menu-toggle:checked + #hamburger + nav ul {
+    display: flex;
+  }
+
+  nav li {
+    width: 100%;
+    border-bottom: 1px solid white;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    text-decoration: none;
+    color: black;
+    background-color: magenta;
+  }
+}
+
+  /* Hide dropdowns in mobile menu */
+.mobile-hide {
+  display: none !important;
 }
