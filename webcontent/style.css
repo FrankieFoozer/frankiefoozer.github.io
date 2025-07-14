@@ -1,0 +1,436 @@
+/* this defines the main typeface as Helvetica */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+    /* Flex container for page layout */
+    .flex-wrapper {
+      display: flex;
+      justify-content: center; /* center horizontally */
+      align-items: flex-start;
+      padding: 20px;
+    }
+
+    /* This makes sure the content stays a fixed width and responsive */
+    .centered-content {
+      max-width: 800px;
+      width: 100%;
+    }
+        /* ABOUT flex-layout switch */
+        @media (max-width: 600px) {
+        .flex-wrapper {
+          flex-direction: column;
+          align-items: center;
+          }
+        }
+
+        /* Flex container for about page layout */
+        .bio-flex {
+          display: flex;
+          justify-content: left;
+          align-items: stretch; /* key update to match heights */
+          gap: 20px;
+          margin: 20px 0;
+        }
+
+        /* Ensure image and video share space */
+        .profile-photo {
+          height: 360px;
+          object-fit: cover;
+          width: 100%;
+          border-radius: 8px;
+        }
+        
+        /* Bio-video */
+        .bio-video video {
+          display: block;
+          margin: 0;
+          width: 300px;       /* Adjust size as needed */
+          height: 200px;
+          object-fit: cover;
+          border-radius: 8px; /* Optional: round corners */
+        }
+
+        .bio-video {
+          margin: 0;
+          padding: 0;
+        }
+
+        .bio-flex {
+          align-items: flex-start;   /* Ensures both image + video align at the top */
+        }
+
+/* this centers all content */
+.centered-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left;
+}
+
+.centered-content header,
+.centered-content main,
+.centered-content footer {
+  width: 100%;
+}
+
+/* these nav elements left-justify and define the style of the nav */
+nav {
+  background-color: magenta;
+}
+
+.indented {
+  text-indent: 2em;
+}
+
+.nav-inner {
+  max-width: 800px;      /* Matches the .centered-content */
+  margin: 0 auto;        /* Centers the nav bar */
+  padding: 0 px;       /* Optional: same as .centered-content padding */
+  text-align: left;
+}
+
+/* this was added as a "dektop override" for the nav - menu stays hidden on mobile and only shows on desktop */
+@media only screen and (min-width: 641px) {
+  nav ul {
+    display: flex;
+  }
+
+  @media only screen and (min-width: 641px) {
+  .mobile-hide {
+    display: block !important;
+  }
+
+  nav li:hover ul.dropdown {
+    display: block !important;
+  }
+}
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1em;              /* spacing between nav items */
+}
+
+nav li a {
+  color: black;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  display: block;
+}
+
+/* this left-justifes headline type, but still keeps it centered */
+h1, h2 {
+  text-align: left;
+}
+
+/* this is my portrait photo style */
+.profile-photo {
+  display: block;
+  margin: 0;
+  width: 300px;       /* Adjust size as needed */
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px; /* Optional: round corners */
+}
+
+/* this is the type leading */
+p {
+  line-height: 1.6;
+}
+
+/* this is h1 color (black) */
+h1 {
+  color: #000;
+}
+
+/* this formats the main content - changed to make everything align left */
+main p {
+  margin: 1em 0;       /* changed from auto to 0 */
+  max-width: 100%;     /* removed inner centering */
+}
+
+/* this aligns my block quote left with everything else */
+blockquote {
+  margin-left: 0;
+}
+
+/* this formats the main paragraph */
+.first-paragraph::first-letter {
+  font-size: 200%;
+  color: #B22222; /* firebrick red, just an example */
+  font-weight: bold;
+  float: left;
+  padding-right: 5px;
+  line-height: 1;
+}
+
+/* this is a rule that says any paragraph that is NOT the first, indent by this amount */
+p:not(.first-paragraph) {
+  text-indent: 2em;
+}
+
+/* this left-aligns the footer */
+footer {
+  width: 100%;
+  text-align: left;
+  padding: 1em 0 0 0;
+  margin-top: 2em;
+}
+
+footer p {
+  margin: 0;
+  padding: 0;       /* ← remove any left padding */
+  max-width: 100%;
+}
+
+footer {
+  text-align: left;
+  margin-top: 2em;
+}
+
+footer {
+  border: none;
+  background-color: magenta;
+}
+
+              .bio-flex {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;   /* flush left */
+                align-items: flex-start;
+                gap: 20px;                     /* consistent space between image and video */
+                margin: 20px 0;
+              }
+
+            /* Desktop hover */
+            nav li:hover ul.dropdown {
+              display: block;
+            }
+
+/* this is a media query to ensure layout stacks appropriately on mobile */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  nav li {
+    margin: 0.5em 0;
+  }
+
+  .profile-photo {
+    width: 100%;
+    max-width: 300px;
+  }
+
+    footer {
+    text-align: center;
+  }
+
+    /* Font scaling for mobile */
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2, h3 {
+    font-size: 1.2rem;
+  }
+
+  body, p {
+    font-size: 0.95rem;
+  }
+
+          /* Bio-video flex */
+        .bio-flex {
+        flex-direction: column;
+        align-items: left;
+        }
+
+        .profile-photo,
+        .bio-video {
+          width: 100%;
+        }
+
+        /* Fixed image dimensions */
+        .profile-photo {
+          width: 300px;
+          height: 200px;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+
+        /* Lock video to same size */
+        .video-fixed {
+          width: 300px;
+          height: 200px;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+
+}
+
+/* new edits */
+#menu-toggle {
+  display: none;
+}
+
+/* Hide dropdowns in mobile menu */
+.mobile-hide {
+  display: none !important;
+}
+
+/* Ensure your content floats above the overlay */
+.footer-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Footer icon style with hover animation */
+.icon {
+  width: 25px;
+  height: 25px;
+  margin: 0 5px;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: transform 0.3s ease !important;
+  transform-origin: center center !important;
+}
+
+.icon:hover {
+  transform: scale(1.5) !important;
+}
+
+/* Footer BG image */
+footer {
+  position: relative;
+  background-image: url("../webcontent/footer_bg_image.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: visible; /* changed from hidden */
+  padding: 2em;
+  margin-top: 2em;
+  text-align: left;
+  color: white;
+  line-height: 2.5; /* gives breathing room for scaling icons */
+}
+
+/* Add the magenta overlay */
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 0, 255, 0.8); /* semi-transparent magenta */
+  z-index: 0;
+}
+
+.education-list {
+  font-family: 'Lora', serif;
+}
+
+@media print {
+  /* Layout and margin cleanup */
+  @page {
+    margin: 1in;
+  }
+
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .centered-content {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  h1 {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  /* Show only the selected elements */
+  .centered-content h1,
+  .centered-content h2,
+  .bio-print,
+  .education-list,
+  .education-list li,
+  blockquote,
+  footer,
+  footer p {
+    display: block !important;
+    color: black !important;
+    font-family: serif !important;
+    background: none !important;
+    background-image: none !important;
+    margin: 0 0 1em 0 !important;
+  }
+
+  /* Hide unwanted elements */
+  .bio-video,
+  .bio-video video,
+  .bio-no-print,
+  #first,
+  #first a,
+  #first a img {
+    display: none !important;
+  }
+
+  /* Hide magenta footer overlay */
+  footer::before {
+    display: none !important;
+  }
+
+  .education-list {
+  list-style-type: disc !important;
+  list-style-position: outside !important;
+  margin-left: 1.5em !important;
+  padding-left: 0 !important;
+  }
+
+  .education-list li {
+    display: list-item !important;
+    line-height: 1.0 !important; /* adjust this number as needed */
+  }
+
+/* Fix left alignment in footer during print */
+footer {
+  text-align: left !important;
+  background: none !important;
+  background-image: none !important;
+  position: static !important;
+}
+
+.footer-content {
+  text-align: left !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+footer p {
+  text-align: left !important;
+  display: block !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+footer {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.footer-content {
+  margin-top: 0 !important;
+  padding: 0 !important;
+}
+
+footer p {
+  line-height: 1.2 !important;
+}
+}
