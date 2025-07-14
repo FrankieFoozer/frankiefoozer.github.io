@@ -83,6 +83,10 @@ nav {
   text-indent: 2em;
 }
 
+.no-indent {
+  text-indent: 0 !important;
+}
+
 .nav-inner {
   max-width: 800px;      /* Matches the .centered-content */
   margin: 0 auto;        /* Centers the nav bar */
