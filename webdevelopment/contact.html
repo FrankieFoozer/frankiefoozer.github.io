@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<!-- 
+  Author: Frank Corridori
+  Date: June 14, 2025
+  File: contact.html
+  Description: Contact Page as part of HTML practice.
+-->
+
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <title>Contact</title>
+
+    <style>
+    #first {
+        margin-top:40px;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 175px;
+                        
+        border: 2px solid red;
+        background-color: orange;
+        color: black;
+        }
+
+    #first a {
+        color: black;
+        text-decoration: underline;
+        }
+    </style>
+
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+<!-- Hamburger Icon for Mobile -->
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" id="hamburger">&#9776;</label>
+
+<!-- Nav Bar -->
+<nav>
+    <div class="nav-inner">
+    <ul>
+        <li>
+            <a href="index.html">HOME</a>
+        </li>
+
+        <li>
+            <a href="about.html">ABOUT</a>
+        </li>
+
+        <li>
+            <a href="learn.html">LEARN</a>
+            <ul class="dropdown mobile-hide">
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="references.html">REFERENCES</a>
+        </li>
+
+        <li>
+            <a href="contact.html">CONTACT</a>
+        </li>
+    </ul>
+    </div>
+</nav>
+<!-- End Nav Bar -->
+
+<div class="flex-wrapper">
+<div class="centered-content">
+    <header>
+        <h1>contact</h1>
+        <h2>let's stay in touch!</h2>
+    </header>
+
+<main>
+  <section class="contact-form-section">
+    <form id="contact-form">
+      <div class="form-row">
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required autofocus>
+      </div>
+
+      <div class="form-row">
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+      </div>
+
+      <div class="form-row">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+      </div>
+
+      <div class="form-row">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Write your message here..." rows="5" required></textarea>
+      </div>
+
+      <div class="form-row">
+        <button type="submit">Send</button>
+      </div>
+    </form>
+  </section>
+</main>
+
+    <footer>
+      <div class="footer-content">
+        <p>
+          &copy; 2025 Frank Corridori | All rights reserved.
+          <a href="mailto:corridorif@missouri.edu">
+            <img class="icon" src="../webcontent/email_icon.png" alt="email icon">
+            corridorif@missouri.edu
+          </a> 
+          <a href="tel:5555555555">
+            <img class="icon" src="../webcontent/phone_icon.png" alt="phone icon">
+            555-555-5555
+          </a>
+        </p>
+      </div>
+    </footer>
+
+</div>
+</div>
+
+</body>
+</html>
