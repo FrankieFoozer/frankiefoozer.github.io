@@ -438,3 +438,86 @@ footer p {
   line-height: 1.2 !important;
 }
 }
+
+.responsive-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Table Styling */
+.table-section {
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.table-section figure {
+  margin: 0;
+  text-align: center;
+}
+
+.table-section figcaption {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.table-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  border: 2px solid #333;
+}
+
+.table-section th,
+.table-section td {
+  padding: 12px;
+  border: 1px solid #333;
+  text-align: center;
+}
+
+/* Highlight first and last row */
+.table-section thead tr,
+.table-section tbody tr:last-child {
+  background-color: #f2d184;
+}
+
+/* Zebra striping using pseudo-classes */
+.table-section tbody tr:nth-child(odd) {
+  background-color: #fff9e6;
+}
+
+.table-section tbody tr:nth-child(even) {
+  background-color: #fdf2d0;
+}
+
+/* Responsive Table (on narrow screens) */
+@media screen and (max-width: 600px) {
+  .table-section table,
+  .table-section thead,
+  .table-section tbody,
+  .table-section th,
+  .table-section td,
+  .table-section tr {
+    display: block;
+  }
+
+  .table-section thead {
+    display: none;
+  }
+
+  .table-section td {
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+  }
+
+  .table-section td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+}
