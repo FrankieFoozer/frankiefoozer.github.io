@@ -8,31 +8,57 @@
 -->
 
 <html lang="en-US">
+
 <head>
     <meta charset="utf-8">
     <title>Contact</title>
 
     <style>
     #first {
-        margin-top:40px;
-        padding-left: 15px;
-        padding-right: 15px;
-        width: 175px;
+          margin-top:40px;
+          padding-left: 15px;
+          padding-right: 15px;
+          width: 175px;
                         
-        border: 2px solid red;
-        background-color: orange;
-        color: black;
-        }
+          border: 2px solid red;
+          background-color: orange;
+          color: black;
+          }
 
     #first a {
-        color: black;
-        text-decoration: underline;
-        }
+          color: black;
+          text-decoration: underline;
+          }
     </style>
 
-    <link rel="stylesheet" href="nav.css">
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      /* Improve line spacing and vertical spacing in the contact form */
+      .contact-form-section form .form-row {
+        margin-bottom: 18px;
+      }
+
+      .contact-form-section label {
+        display: block;
+        margin-bottom: 6px;
+        line-height: 1.4;
+      }
+
+      .contact-form-section input,
+      .contact-form-section textarea {
+        width: 100%;
+        padding: 8px;
+        line-height: 1.5;
+        box-sizing: border-box;
+        margin-top: 4px;
+      }
+    </style>
+
+          <link rel="icon" href="../webcontent/favicon.ico" type="image/x-icon">
+
+          <link rel="stylesheet" href="nav.css">
+          <link rel="stylesheet" href="style.css">  
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 
 <body>
@@ -56,9 +82,11 @@
         <li>
             <a href="learn.html">LEARN</a>
             <ul class="dropdown mobile-hide">
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 3</a></li>
+                <li><a href="learn.html#bps">01 The "BPS"</a></li>
+                <li><a href="learn.html#conceptual">02 "Conceptual Design"</a></li>
+                <li><a href="learn.html#originality">03 "Originality"</a></li>
+                <li><a href="learn.html#simplicity">04 "Simplicity"</a></li>
+                <li><a href="learn.html#history">05 "History"</a></li>
             </ul>
         </li>
 
@@ -83,30 +111,30 @@
 
 <main>
   <section class="contact-form-section">
-    <form id="contact-form">
-      <div class="form-row">
+    <form action="mailto:corridorif@missouri.edu" method="POST" enctype="text/plain">
+    <div class="form-row">
         <label for="first-name">First Name:</label>
-        <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required autofocus>
-      </div>
+        <input type="text" id="first-name" name="First Name" placeholder="Enter your first name" required autofocus>
+    </div>
 
-      <div class="form-row">
+    <div class="form-row">
         <label for="last-name">Last Name:</label>
-        <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
-      </div>
+        <input type="text" id="last-name" name="Last Name" placeholder="Enter your last name" required>
+    </div>
 
-      <div class="form-row">
+    <div class="form-row">
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="you@example.com" required>
-      </div>
+        <input type="email" id="email" name="Email" placeholder="you@example.com" required>
+    </div>
 
-      <div class="form-row">
+    <div class="form-row">
         <label for="message">Message:</label>
-        <textarea id="message" name="message" placeholder="Write your message here..." rows="5" required></textarea>
-      </div>
+        <textarea id="message" name="Message" placeholder="Write your message here..." rows="5" required></textarea>
+    </div>
 
-      <div class="form-row">
+    <div class="form-row">
         <button type="submit">Send</button>
-      </div>
+    </div>
     </form>
   </section>
 </main>
